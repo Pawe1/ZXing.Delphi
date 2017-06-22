@@ -7,7 +7,7 @@
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Release</Config>
         <Platform Condition="'$(Platform)'==''">Android</Platform>
-        <TargetedPlatforms>1111</TargetedPlatforms>
+        <TargetedPlatforms>19</TargetedPlatforms>
         <AppType>Application</AppType>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
@@ -15,26 +15,6 @@
     </PropertyGroup>
     <PropertyGroup Condition="('$(Platform)'=='Android' and '$(Base)'=='true') or '$(Base_Android)'!=''">
         <Base_Android>true</Base_Android>
-        <CfgParent>Base</CfgParent>
-        <Base>true</Base>
-    </PropertyGroup>
-    <PropertyGroup Condition="('$(Platform)'=='iOSDevice32' and '$(Base)'=='true') or '$(Base_iOSDevice32)'!=''">
-        <Base_iOSDevice32>true</Base_iOSDevice32>
-        <CfgParent>Base</CfgParent>
-        <Base>true</Base>
-    </PropertyGroup>
-    <PropertyGroup Condition="('$(Platform)'=='iOSDevice64' and '$(Base)'=='true') or '$(Base_iOSDevice64)'!=''">
-        <Base_iOSDevice64>true</Base_iOSDevice64>
-        <CfgParent>Base</CfgParent>
-        <Base>true</Base>
-    </PropertyGroup>
-    <PropertyGroup Condition="('$(Platform)'=='iOSSimulator' and '$(Base)'=='true') or '$(Base_iOSSimulator)'!=''">
-        <Base_iOSSimulator>true</Base_iOSSimulator>
-        <CfgParent>Base</CfgParent>
-        <Base>true</Base>
-    </PropertyGroup>
-    <PropertyGroup Condition="('$(Platform)'=='OSX32' and '$(Base)'=='true') or '$(Base_OSX32)'!=''">
-        <Base_OSX32>true</Base_OSX32>
         <CfgParent>Base</CfgParent>
         <Base>true</Base>
     </PropertyGroup>
@@ -334,82 +314,6 @@
         <DCCReference Include="uMain.pas">
             <Form>FormMain</Form>
         </DCCReference>
-        <DCCReference Include="..\lib\Classes\1D Barcodes\ZXing.OneD.UPCEANReader.pas"/>
-        <DCCReference Include="..\lib\Classes\1D Barcodes\ZXing.OneD.UPCEANExtensionSupport.pas"/>
-        <DCCReference Include="..\lib\Classes\1D Barcodes\ZXing.OneD.UPCEANExtension5Support.pas"/>
-        <DCCReference Include="..\lib\Classes\1D Barcodes\ZXing.OneD.UPCEANExtension2Support.pas"/>
-        <DCCReference Include="..\lib\Classes\1D Barcodes\ZXing.OneD.OneDReader.pas"/>
-        <DCCReference Include="..\lib\Classes\1D Barcodes\ZXing.OneD.ITFReader.pas"/>
-        <DCCReference Include="..\lib\Classes\1D Barcodes\ZXing.OneD.EANManufacturerOrgSupport.pas"/>
-        <DCCReference Include="..\Lib\Classes\1D Barcodes\ZXing.OneD.EAN8Reader.pas"/>
-        <DCCReference Include="..\lib\Classes\1D Barcodes\ZXing.OneD.EAN13Reader.pas"/>
-        <DCCReference Include="..\lib\Classes\1D Barcodes\ZXing.OneD.Code93Reader.pas"/>
-        <DCCReference Include="..\lib\Classes\1D Barcodes\ZXing.OneD.Code128Reader.pas"/>
-        <DCCReference Include="..\lib\Classes\2D Barcodes\ZXing.QrCode.QRCodeReader.pas"/>
-        <DCCReference Include="..\lib\Classes\2D Barcodes\ZXing.Datamatrix.DataMatrixReader.pas"/>
-        <DCCReference Include="..\lib\Classes\2D Barcodes\Decoder\ZXing.QrCode.Internal.Version.pas"/>
-        <DCCReference Include="..\lib\Classes\2D Barcodes\Decoder\ZXing.QrCode.Internal.QRCodeDecoderMetaData.pas"/>
-        <DCCReference Include="..\lib\Classes\2D Barcodes\Decoder\ZXing.QrCode.Internal.Mode.pas"/>
-        <DCCReference Include="..\lib\Classes\2D Barcodes\Decoder\ZXing.QrCode.Internal.FormatInformation.pas"/>
-        <DCCReference Include="..\lib\Classes\2D Barcodes\Decoder\ZXing.QrCode.Internal.ErrorCorrectionLevel.pas"/>
-        <DCCReference Include="..\lib\Classes\2D Barcodes\Decoder\ZXing.QrCode.Internal.Decoder.pas"/>
-        <DCCReference Include="..\lib\Classes\2D Barcodes\Decoder\ZXing.QrCode.Internal.DecodedBitStreamParser.pas"/>
-        <DCCReference Include="..\lib\Classes\2D Barcodes\Decoder\ZXing.QrCode.Internal.DataMask.pas"/>
-        <DCCReference Include="..\lib\Classes\2D Barcodes\Decoder\ZXing.QrCode.Internal.DataBlock.pas"/>
-        <DCCReference Include="..\lib\Classes\2D Barcodes\Decoder\ZXing.QrCode.Internal.BitMatrixParser.pas"/>
-        <DCCReference Include="..\lib\Classes\2D Barcodes\Decoder\ZXing.Datamatrix.Internal.Version.pas"/>
-        <DCCReference Include="..\lib\Classes\2D Barcodes\Decoder\ZXing.Datamatrix.Internal.Decoder.pas"/>
-        <DCCReference Include="..\lib\Classes\2D Barcodes\Decoder\ZXing.Datamatrix.Internal.DecodedBitStreamParser.pas"/>
-        <DCCReference Include="..\lib\Classes\2D Barcodes\Decoder\ZXing.Datamatrix.Internal.DataBlock.pas"/>
-        <DCCReference Include="..\lib\Classes\2D Barcodes\Decoder\ZXing.Datamatrix.Internal.BitMatrixParser.pas"/>
-        <DCCReference Include="..\lib\Classes\2D Barcodes\Detector\ZXing.QrCode.Internal.FinderPatternInfo.pas"/>
-        <DCCReference Include="..\Lib\Classes\2D Barcodes\Detector\ZXing.QrCode.Internal.FinderPatternImplementation.pas"/>
-        <DCCReference Include="..\lib\Classes\2D Barcodes\Detector\ZXing.QrCode.Internal.FinderPatternFinder.pas"/>
-        <DCCReference Include="..\Lib\Classes\2D Barcodes\Detector\ZXing.QrCode.Internal.FinderPattern.pas"/>
-        <DCCReference Include="..\lib\Classes\2D Barcodes\Detector\ZXing.QrCode.Internal.Detector.pas"/>
-        <DCCReference Include="..\Lib\Classes\2D Barcodes\Detector\ZXing.QrCode.Internal.AlignmentPatternImplementation.pas"/>
-        <DCCReference Include="..\lib\Classes\2D Barcodes\Detector\ZXing.QrCode.Internal.AlignmentPatternFinder.pas"/>
-        <DCCReference Include="..\Lib\Classes\2D Barcodes\Detector\ZXing.QrCode.Internal.AlignmentPattern.pas"/>
-        <DCCReference Include="..\lib\Classes\2D Barcodes\Detector\ZXing.Datamatrix.Internal.Detector.pas"/>
-        <DCCReference Include="..\lib\Classes\Common\ZXing.StringUtils.pas"/>
-        <DCCReference Include="..\Lib\Classes\Common\ZXing.ResultPointImplementation.pas"/>
-        <DCCReference Include="..\lib\Classes\Common\ZXing.ResultPoint.pas"/>
-        <DCCReference Include="..\lib\Classes\Common\ZXing.ResultMetadataType.pas"/>
-        <DCCReference Include="..\lib\Classes\Common\ZXing.ReadResult.pas"/>
-        <DCCReference Include="..\lib\Classes\Common\ZXing.Reader.pas"/>
-        <DCCReference Include="..\lib\Classes\Common\ZXing.MultiFormatReader.pas"/>
-        <DCCReference Include="..\lib\Classes\Common\ZXing.Helpers.pas"/>
-        <DCCReference Include="..\lib\Classes\Common\ZXing.EncodeHintType.pas"/>
-        <DCCReference Include="..\lib\Classes\Common\ZXing.DefaultGridSampler.pas"/>
-        <DCCReference Include="..\lib\Classes\Common\ZXing.DecoderResult.pas"/>
-        <DCCReference Include="..\lib\Classes\Common\ZXing.DecodeHintType.pas"/>
-        <DCCReference Include="..\lib\Classes\Common\ZXing.Common.PerspectiveTransform.pas"/>
-        <DCCReference Include="..\lib\Classes\Common\ZXing.Common.GridSampler.pas"/>
-        <DCCReference Include="..\lib\Classes\Common\ZXing.Common.DetectorResult.pas"/>
-        <DCCReference Include="..\lib\Classes\Common\ZXing.Common.BitMatrix.pas"/>
-        <DCCReference Include="..\Lib\Classes\Common\ZXing.Common.BitArrayImplementation.pas"/>
-        <DCCReference Include="..\lib\Classes\Common\ZXing.Common.BitArray.pas"/>
-        <DCCReference Include="..\lib\Classes\Common\ZXing.CharacterSetECI.pas"/>
-        <DCCReference Include="..\Lib\Classes\Common\ZXIng.ByteSegments.pas"/>
-        <DCCReference Include="..\lib\Classes\Common\ZXing.BitSource.pas"/>
-        <DCCReference Include="..\lib\Classes\Common\ZXing.BarcodeFormat.pas"/>
-        <DCCReference Include="..\lib\Classes\ZXing.ScanManager.pas"/>
-        <DCCReference Include="..\lib\Classes\Filtering\ZXing.RGBLuminanceSource.pas"/>
-        <DCCReference Include="..\lib\Classes\Filtering\ZXing.PlanarYUVLuminanceSource.pas"/>
-        <DCCReference Include="..\lib\Classes\Filtering\ZXing.LuminanceSource.pas"/>
-        <DCCReference Include="..\lib\Classes\Filtering\ZXing.InvertedLuminanceSource.pas"/>
-        <DCCReference Include="..\lib\Classes\Filtering\ZXing.HybridBinarizer.pas"/>
-        <DCCReference Include="..\lib\Classes\Filtering\ZXing.GlobalHistogramBinarizer.pas"/>
-        <DCCReference Include="..\lib\Classes\Filtering\ZXing.BinaryBitmap.pas"/>
-        <DCCReference Include="..\lib\Classes\Filtering\ZXing.Binarizer.pas"/>
-        <DCCReference Include="..\lib\Classes\Filtering\ZXing.BaseLuminanceSource.pas"/>
-        <DCCReference Include="..\lib\Classes\Common\Detector\ZXing.Common.Detector.WhiteRectangleDetector.pas"/>
-        <DCCReference Include="..\lib\Classes\Common\Detector\ZXing.Common.Detector.MathUtils.pas"/>
-        <DCCReference Include="..\lib\Classes\Common\ReedSolomon\ZXing.Common.ReedSolomon.ReedSolomonDecoder.pas"/>
-        <DCCReference Include="..\lib\Classes\Common\ReedSolomon\ZXing.Common.ReedSolomon.GenericGF.pas"/>
-        <DCCReference Include="..\Lib\Classes\1D Barcodes\ZXing.OneD.UPCAReader.pas"/>
-        <DCCReference Include="..\Lib\Classes\1D Barcodes\ZXing.OneD.Code39Reader.pas"/>
-        <DCCReference Include="..\Lib\Classes\1D Barcodes\ZXing.OneD.UPCEReader.pas"/>
         <DCCReference Include="AudioManager\AudioManager.pas"/>
         <DCCReference Include="Custom\FMX.Media.Android.pas"/>
         <DCCReference Include="SIMD\FastUtils.pas"/>
@@ -1121,10 +1025,6 @@
             </Deployment>
             <Platforms>
                 <Platform value="Android">True</Platform>
-                <Platform value="iOSDevice32">True</Platform>
-                <Platform value="iOSDevice64">True</Platform>
-                <Platform value="iOSSimulator">False</Platform>
-                <Platform value="OSX32">True</Platform>
                 <Platform value="Win32">True</Platform>
                 <Platform value="Win64">True</Platform>
             </Platforms>
